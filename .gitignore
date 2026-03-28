@@ -61,7 +61,7 @@ Thumbs.db
 coverage/
 
 # ================================
-# Database (n?u có local file)
+# Database (n?u cï¿½ local file)
 # ================================
 *.sqlite
 *.db
