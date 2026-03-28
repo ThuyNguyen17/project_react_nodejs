@@ -1,0 +1,10 @@
+{
+  "name": "nodejs_class_management",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node tools/dev.js",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server"
+  }
+}
