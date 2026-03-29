@@ -23,8 +23,8 @@ export default function Login() {
       const user = await login(username.trim(), password.trim());
       localStorage.setItem('user', JSON.stringify(user));
 
-      if (user.role === 'ADMIN') navigate('/admin');
-      else if (user.role === 'TEACHER') navigate('/teacher/timetable');
+      if (user.role === 'ADMIN') navigate('/admin/dashboard');
+      else if (user.role === 'TEACHER') navigate('/teacher/dashboard');
       else if (user.role === 'STUDENT') navigate('/student/dashboard');
       else setError('Tài khoản không có quyền truy cập hệ thống');
     } catch (err) {

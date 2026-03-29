@@ -62,7 +62,36 @@
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* New Ocean Blue & Off-White Palette - Semantic Version */
+  --content-bg: #F6F6F6;        /* Light Cream Background */
+  --content-text: #2C3E50;      /* Dark Greyish Blue Text */
+  
+  --sidebar-bg: #22577E;        /* Dark Blue Sidebar */
+  --sidebar-text: #FFFFFF;      /* White Sidebar Text */
+  
+  --accent-primary: #5584AC;    /* Medium Blue Accents */
+  --accent-secondary: #89C4E1;  /* Light Blue Accents */
+  
+  --card-bg: #FFFFFF;           /* Pure White Cards */
+  --card-shadow: rgba(34, 87, 126, 0.12);
+  
+  --color-border-hr: rgba(255, 255, 255, 0.1);
+  --color-link-active: #89C4E1;
+  
+  /* Standard overrides for global buttons */
+  --primary: #22577E;
+  --primary-hover: #5584AC;
+  --white: #FFFFFF;
+}
+
+/* Dark Theme Variables - Simplified for now */
+.dark-theme {
+  --content-bg: #0F172A;
+  --content-text: #F8FAFC;
+  --sidebar-bg: #1E293B;
+  --sidebar-text: #F8FAFC;
+  --card-bg: #1E293B;
+  --accent-primary: #38BDF8;
 }
 
 * {
@@ -73,10 +102,13 @@
 
 body {
   margin: 0;
-  background-color: var(--bg-main);
-  color: var(--text-dark);
+  padding: 0;
+  background-color: var(--content-bg);
+  color: var(--content-text);
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 #root {
@@ -159,23 +191,24 @@ input:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(145, 200, 228, 0.2);
 }
 
-/* Scrollbar Styling */
+/* Modern Thin Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-main);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 5px;
+  background: rgba(34, 87, 126, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-hover);
+  background: var(--accent-primary);
 }
 
 @theme inline {
