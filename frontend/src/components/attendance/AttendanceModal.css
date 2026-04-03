@@ -1,0 +1,190 @@
+/* ===== OVERLAY ===== */
+.attendance-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* ===== CARD ===== */
+.attendance-modal-card {
+    background: #fff;
+    width: 95vw;
+    max-width: 1400px;
+    height: 90vh;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== HEADER ===== */
+.attendance-modal-card header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attendance-modal-card header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.attendance-modal-card header p {
+    margin: 4px 0 0;
+    color: #64748b;
+}
+
+.attendance-modal-card header button {
+    border: none;
+    background: #f1f5f9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ===== BODY ===== */
+.attendance-modal-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    overflow: hidden;
+}
+
+/* ===== QR ===== */
+.attendance-modal-body > div:first-child {
+    border-right: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== RIGHT SIDE ===== */
+.attendance-modal-body > div:last-child {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* ===== TAB ===== */
+.attendance-modal-body button {
+    margin-right: 10px;
+    padding: 10px 16px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.attendance-modal-body button:hover {
+    background: #e2e8f0;
+}
+
+/* ===== TABLE ===== */
+.attendance-modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table-layout: fixed;
+}
+
+/* Column widths */
+.attendance-modal-body th:nth-child(1),
+.attendance-modal-body td:nth-child(1) {
+    width: 25%; /* Học sinh */
+}
+
+.attendance-modal-body th:nth-child(2),
+.attendance-modal-body td:nth-child(2) {
+    width: 15%; /* Thời gian / Mã SV */
+}
+
+.attendance-modal-body th:nth-child(3),
+.attendance-modal-body td:nth-child(3) {
+    width: 30%; /* Vị trí / Trạng thái */
+}
+
+.attendance-modal-body th:nth-child(4),
+.attendance-modal-body td:nth-child(4) {
+    width: 15%; /* Trạng thái */
+}
+
+.attendance-modal-body th:nth-child(5),
+.attendance-modal-body td:nth-child(5) {
+    width: 15%; /* Ghi chú */
+}
+
+.attendance-modal-body th {
+    background: #f8fafc;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #64748b;
+    position: sticky;
+    top: 0;
+}
+
+.attendance-modal-body td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.attendance-modal-body tr:hover {
+    background: #f9fafb;
+}
+
+/* ===== INPUT ===== */
+.attendance-modal-body input {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.attendance-modal-body input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* ===== FOOTER ===== */
+.attendance-modal-card footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.attendance-modal-card footer button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== BUTTONS ===== */
+.attendance-modal-card footer button:nth-child(1) {
+    background: #e2e8f0;
+}
+
+.attendance-modal-card footer button:nth-child(2) {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.attendance-modal-card footer button:nth-child(3) {
+    background: #4f46e5;
+    color: white;
+}

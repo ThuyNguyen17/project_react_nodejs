@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Full page background */
+.attendance-qr-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.attendance-qr-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  padding: 40px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.attendance-qr-logo {
+  margin-bottom: 28px;
+}
+
+.attendance-qr-logo span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+/* Status section */
+.attendance-qr-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.attendance-qr-status h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.attendance-qr-status p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.attendance-qr-status.success h2 { color: #16a34a; }
+.attendance-qr-status.error h2 { color: #dc2626; }
+.attendance-qr-status.error p { color: #dc2626; max-width: 300px; line-height: 1.6; }
+
+/* Spin animation */
+.spin-icon {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Location badge */
+.attendance-qr-loc {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  text-align: left;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+/* Action buttons */
+.attendance-qr-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 8px;
+}
+
+.qr-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.qr-btn--primary {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+}
+
+.qr-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+}
+
+.qr-btn--ghost {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.qr-btn--ghost:hover {
+  background: #e2e8f0;
+}
